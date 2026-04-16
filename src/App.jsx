@@ -61,6 +61,33 @@ function SectionTitle({ eyebrow, title, subtitle }) {
 }
 
 export default function LandingVacacionesADNE() {
+  const handleWhatsAppSubmit = (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const acudiente = form.acudiente.value.trim();
+  const nino = form.nino.value.trim();
+  const edad = form.edad.value.trim();
+  const telefono = form.telefono.value.trim();
+  const correo = form.correo.value.trim();
+  const jornada = form.jornada.value.trim();
+  const mensaje = form.mensaje.value.trim();
+
+  const texto = `Hola, quiero información e inscripción para Vacaciones Recreativas ADNE.
+
+*Nombre del acudiente:* ${acudiente}
+*Nombre del niño(a):* ${nino}
+*Edad:* ${edad}
+*Teléfono:* ${telefono}
+*Correo:* ${correo || "No registra"}
+*Jornada de interés:* ${jornada}
+*Mensaje adicional:* ${mensaje || "Ninguno"}
+
+Quedo atento(a) a la información para reservar cupo.`;
+
+  const url = `https://wa.me/573133881555?text=${encodeURIComponent(texto)}`;
+  window.open(url, "_blank");
+};
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-[Poppins]">
       <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
@@ -288,41 +315,33 @@ export default function LandingVacacionesADNE() {
                 inscripción, pagos, paquetes y ubicación del grupo ideal.
               </p>
 
-              <div className="mt-6 space-y-4">
-                {[
-                  "Nombre del acudiente",
-                  "Nombre del niño o niña",
-                  "Edad",
-                  "Teléfono / WhatsApp",
-                  "Correo electrónico",
-                ].map((ph) => (
-                  <input
-                    key={ph}
-                    placeholder={ph}
-                    className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-cyan-300"
-                  />
-                ))}
+              const handleWhatsAppSubmit = (e) => {
+  e.preventDefault();
 
-                <select className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none text-slate-300 focus:border-cyan-300">
-                  <option>Selecciona la jornada</option>
-                  <option>Jornada mañana</option>
-                  <option>Jornada tarde</option>
-                  <option>Jornada completa</option>
-                </select>
+  const form = e.target;
+  const acudiente = form.acudiente.value.trim();
+  const nino = form.nino.value.trim();
+  const edad = form.edad.value.trim();
+  const telefono = form.telefono.value.trim();
+  const correo = form.correo.value.trim();
+  const jornada = form.jornada.value.trim();
+  const mensaje = form.mensaje.value.trim();
 
-                <textarea
-                  rows={4}
-                  placeholder="Cuéntanos si te interesa transporte o salidas recreativas"
-                  className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-cyan-300"
-                />
+  const texto = `Hola, quiero información e inscripción para Vacaciones Recreativas ADNE.
 
-                <a
-                  href="https://tusitio.com/lead-vacaciones-recreativas"
-                  className="w-full inline-flex justify-center items-center gap-2 rounded-2xl bg-[#E6007E] hover:bg-[#c4006b] transition px-5 py-4 font-black text-lg"
-                >
-                  Quiero reservar <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
+*Nombre del acudiente:* ${acudiente}
+*Nombre del niño(a):* ${nino}
+*Edad:* ${edad}
+*Teléfono:* ${telefono}
+*Correo:* ${correo || "No registra"}
+*Jornada de interés:* ${jornada}
+*Mensaje adicional:* ${mensaje || "Ninguno"}
+
+Quedo atento(a) a la información para reservar cupo.`;
+
+  const url = `https://wa.me/573133881555?text=${encodeURIComponent(texto)}`;
+  window.open(url, "_blank");
+};
             </div>
           </div>
         </div>
