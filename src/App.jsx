@@ -62,32 +62,35 @@ function SectionTitle({ eyebrow, title, subtitle }) {
 
 export default function LandingVacacionesADNE() {
   const handleWhatsAppSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const form = e.target;
-  const acudiente = form.acudiente.value.trim();
-  const nino = form.nino.value.trim();
-  const edad = form.edad.value.trim();
-  const telefono = form.telefono.value.trim();
-  const correo = form.correo.value.trim();
-  const jornada = form.jornada.value.trim();
-  const mensaje = form.mensaje.value.trim();
+    const form = e.target;
+    const acudiente = form.acudiente.value.trim();
+    const nino = form.nino.value.trim();
+    const edad = form.edad.value.trim();
+    const telefono = form.telefono.value.trim();
+    const correo = form.correo.value.trim();
+    const jornada = form.jornada.value.trim();
+    const mensaje = form.mensaje.value.trim();
 
-  const texto = `Hola, quiero información e inscripción para Vacaciones Recreativas ADNE.
+    const texto = `Hola, quiero información e inscripción para Vacaciones Recreativas ADNE.
 
-*Nombre del acudiente:* ${acudiente}
-*Nombre del niño(a):* ${nino}
-*Edad:* ${edad}
-*Teléfono:* ${telefono}
-*Correo:* ${correo || "No registra"}
-*Jornada de interés:* ${jornada}
-*Mensaje adicional:* ${mensaje || "Ninguno"}
+Nombre del acudiente: ${acudiente}
+Nombre del niño(a): ${nino}
+Edad: ${edad}
+Teléfono: ${telefono}
+Correo: ${correo || "No registra"}
+Jornada de interés: ${jornada}
+Mensaje adicional: ${mensaje || "Ninguno"}
 
 Quedo atento(a) a la información para reservar cupo.`;
 
-  const url = `https://wa.me/573133881555?text=${encodeURIComponent(texto)}`;
-  window.open(url, "_blank");
-};
+    const url = `https://api.whatsapp.com/send?phone=573133881555&text=${encodeURIComponent(
+      texto
+    )}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-[Poppins]">
       <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
@@ -107,19 +110,18 @@ Quedo atento(a) a la información para reservar cupo.`;
 
       {/* HERO */}
       <section className="relative overflow-hidden text-white">
-        {/* FONDO BASE */}
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#153a7a,_#07142e_55%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#153a7a,_#07142e_55%)]"></div>
 
-{/* IMAGEN DERECHA CON DIFUMINADO */}
-<div
-  className="absolute inset-0 bg-no-repeat bg-right bg-cover opacity-80"
-  style={{
-    backgroundImage: `
-      linear-gradient(to right, rgba(7,20,46,1) 0%, rgba(7,20,46,0.95) 45%, rgba(7,20,46,0.6) 70%, rgba(7,20,46,0.2) 85%, rgba(7,20,46,0) 100%),
-      url('/parque.png')
-    `
-  }}
-></div>
+        <div
+          className="absolute inset-0 bg-no-repeat bg-right bg-cover opacity-80"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(7,20,46,1) 0%, rgba(7,20,46,0.95) 45%, rgba(7,20,46,0.6) 70%, rgba(7,20,46,0.2) 85%, rgba(7,20,46,0) 100%),
+              url('/parque.png')
+            `,
+          }}
+        ></div>
+
         <div className="absolute inset-0 opacity-20 bg-[linear-gradient(120deg,transparent_0%,rgba(255,255,255,0.08)_50%,transparent_100%)]" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-10 pt-8 pb-16 md:pb-24 relative">
@@ -315,33 +317,69 @@ Quedo atento(a) a la información para reservar cupo.`;
                 inscripción, pagos, paquetes y ubicación del grupo ideal.
               </p>
 
-              const handleWhatsAppSubmit = (e) => {
-  e.preventDefault();
+              <form onSubmit={handleWhatsAppSubmit} className="mt-6 space-y-4">
+                <input
+                  name="acudiente"
+                  placeholder="Nombre del acudiente"
+                  required
+                  className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-cyan-300"
+                />
 
-  const form = e.target;
-  const acudiente = form.acudiente.value.trim();
-  const nino = form.nino.value.trim();
-  const edad = form.edad.value.trim();
-  const telefono = form.telefono.value.trim();
-  const correo = form.correo.value.trim();
-  const jornada = form.jornada.value.trim();
-  const mensaje = form.mensaje.value.trim();
+                <input
+                  name="nino"
+                  placeholder="Nombre del niño o niña"
+                  required
+                  className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-cyan-300"
+                />
 
-  const texto = `Hola, quiero información e inscripción para Vacaciones Recreativas ADNE.
+                <input
+                  name="edad"
+                  placeholder="Edad"
+                  required
+                  className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-cyan-300"
+                />
 
-*Nombre del acudiente:* ${acudiente}
-*Nombre del niño(a):* ${nino}
-*Edad:* ${edad}
-*Teléfono:* ${telefono}
-*Correo:* ${correo || "No registra"}
-*Jornada de interés:* ${jornada}
-*Mensaje adicional:* ${mensaje || "Ninguno"}
+                <input
+                  name="telefono"
+                  placeholder="Teléfono / WhatsApp"
+                  required
+                  className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-cyan-300"
+                />
 
-Quedo atento(a) a la información para reservar cupo.`;
+                <input
+                  name="correo"
+                  placeholder="Correo electrónico"
+                  className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-cyan-300"
+                />
 
-  const url = `https://wa.me/573133881555?text=${encodeURIComponent(texto)}`;
-  window.open(url, "_blank");
-};
+                <select
+                  name="jornada"
+                  required
+                  defaultValue=""
+                  className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none text-slate-300 focus:border-cyan-300"
+                >
+                  <option value="" disabled>
+                    Selecciona la jornada
+                  </option>
+                  <option>Jornada mañana</option>
+                  <option>Jornada tarde</option>
+                  <option>Jornada completa</option>
+                </select>
+
+                <textarea
+                  name="mensaje"
+                  rows={4}
+                  placeholder="Cuéntanos si te interesa transporte o salidas recreativas"
+                  className="w-full rounded-2xl bg-white/10 border border-white/10 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-cyan-300"
+                />
+
+                <button
+                  type="submit"
+                  className="w-full inline-flex justify-center items-center gap-2 rounded-2xl bg-[#E6007E] hover:bg-[#c4006b] transition px-5 py-4 font-black text-lg"
+                >
+                  Quiero reservar <ArrowRight className="w-5 h-5" />
+                </button>
+              </form>
             </div>
           </div>
         </div>
