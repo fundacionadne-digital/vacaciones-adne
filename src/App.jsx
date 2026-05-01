@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   CalendarDays,
@@ -11,7 +11,6 @@ import {
   Phone,
   MessageCircle,
   PartyPopper,
-  PlayCircle,
 } from "lucide-react";
 
 const included = [
@@ -61,6 +60,29 @@ function SectionTitle({ eyebrow, title, subtitle }) {
 }
 
 export default function LandingVacacionesADNE() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!videoRef.current) return;
+
+        if (entry.isIntersecting) {
+          videoRef.current.play().catch(() => {});
+        } else {
+          videoRef.current.pause();
+        }
+      },
+      { threshold: 0.6 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleWhatsAppSubmit = (e) => {
     e.preventDefault();
 
@@ -222,13 +244,19 @@ Quedo atento(a) a la información para reservar cupo.`;
       {/* SECCIÓN 2: VIDEO + INFO VERTICAL */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-10 items-center">
-          <div className="rounded-[2rem] overflow-hidden shadow-2xl bg-black/80 h-[350px] relative">
-  <video
-    src="/hero-video.mp4"
-    controls
-    className="w-full h-full object-cover"
-  />
-</div>
+          <div className="rounded-[2rem] p-[4px] bg-gradient-to-r from-[#E6007E] via-cyan-400 to-[#E6007E] shadow-2xl">
+            <div className="bg-black rounded-[1.8rem] overflow-hidden aspect-square flex items-center justify-center">
+              <video
+                ref={videoRef}
+                src="/hero-video.mp4"
+                muted
+                loop
+                playsInline
+                controls
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
 
           <div className="flex flex-col gap-4">
             {[
