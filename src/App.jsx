@@ -39,15 +39,24 @@ const dailyExperience = [
 
 const testimonials = [
   {
-    name: "Mamá de niño de 5 años",
+    name: "María Fernanda López",
+    role: "Mamá de niño de 5 años",
+    date: "Vacaciones Recreativas ADNE 2022",
+    image: "/testimonio-maria.jpeg",
     text: "Mi hijo no quería que se acabara el día. Llegaba feliz, cansado y contando todo lo que había vivido… y eso no tiene precio.",
   },
   {
-    name: "Mamá de niño de 7 años",
+    name: "Laura Camila Restrepo",
+    role: "Mamá de niño de 7 años",
+    date: "Vacaciones Recreativas ADNE 2023",
+    image: "/testimonio-laura.jpeg",
     text: "Lo inscribimos porque no queríamos pausar su proceso de neurodesarrollo… y fue la mejor decisión. Siguió avanzando, pero feliz.",
   },
   {
-    name: "Papá de niño de 10 años",
+    name: "Juan Pablo Méndez",
+    role: "Papá de niño de 10 años",
+    date: "Vacaciones Recreativas ADNE 2024",
+    image: "/testimonio-juan.jpeg",
     text: "Pensé que sería solo recreación… pero fue mucho más. Aprendió, hizo amigos y ganó seguridad.",
   },
 ];
@@ -314,44 +323,65 @@ Quedo atento(a) a la información para reservar cupo.`;
       </section>
 
       {/* IMÁGENES DE VALOR */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <SectionTitle
-            eyebrow="Valor diferencial"
-            title="Aquí no solo juegan… también avanzan"
-            subtitle="Muchos niños continúan su proceso de desarrollo mientras disfrutan. Sin pausas, sin retrocesos… solo avance real."
+      {/* IMÁGENES DE VALOR */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-6 md:px-10">
+    <SectionTitle
+      eyebrow="Valor diferencial"
+      title="Aquí no solo juegan… también avanzan"
+      subtitle="Muchos niños continúan su proceso de desarrollo mientras disfrutan. Sin pausas, sin retrocesos… solo avance real."
+    />
+
+    <div className="mt-10 grid lg:grid-cols-[1.25fr_0.9fr] gap-8 items-start">
+      <div>
+        <p className="mb-4 text-xl font-black text-slate-900">
+          Aquí no solo juegan… también avanzan.
+        </p>
+        <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-cyan-300 bg-slate-950">
+          <img
+            src="/terapeutico.jpeg"
+            alt="Enfoque terapéutico ADNE"
+            className="w-full h-auto object-contain"
           />
-
-          <div className="mt-10 grid lg:grid-cols-2 gap-8">
-            <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-cyan-300 bg-slate-950">
-              <img src="/terapeutico.jpeg" alt="Enfoque terapéutico ADNE" className="w-full h-full object-cover" />
-            </div>
-
-            <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#E6007E] bg-slate-950">
-              <img src="/preventa.jpeg" alt="Preventa Vacaciones Recreativas ADNE" className="w-full h-full object-cover" />
-            </div>
-          </div>
-
-          <div className="mt-8 rounded-[2rem] bg-gradient-to-r from-[#E6007E] via-[#7c3aed] to-cyan-500 text-white p-7 md:p-9 shadow-2xl">
-            <p className="text-3xl md:text-5xl font-black">20% OFF</p>
-            <p className="mt-2 text-xl md:text-2xl font-black">
-              Preventa activa + descuento adicional por hermanos.
-            </p>
-            <p className="mt-4 text-white/90 text-lg">
-              Las familias que ya entendieron el valor… ya están adentro.
-            </p>
-            <p className="mt-1 text-white font-black text-xl">No te quedes por fuera.</p>
-
-            <a
-              href="https://wa.me/573133881555"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-600 transition px-7 py-4 text-white font-black shadow-xl"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Separar cupo por WhatsApp
-            </a>
-          </div>
         </div>
-      </section>
+      </div>
+
+      <div>
+        <p className="mb-4 text-xl font-black text-slate-900">
+          Preventa activa + beneficio familiar real.
+        </p>
+        <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#E6007E] bg-slate-950">
+          <img
+            src="/preventa.jpeg"
+            alt="Preventa Vacaciones Recreativas ADNE"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div className="mt-8 rounded-[2rem] bg-gradient-to-r from-[#E6007E] via-[#7c3aed] to-cyan-500 text-white p-7 md:p-9 shadow-2xl">
+      <p className="text-3xl md:text-5xl font-black">20% OFF</p>
+      <p className="mt-2 text-xl md:text-2xl font-black">
+        Preventa activa + descuento adicional por hermanos.
+      </p>
+      <p className="mt-4 text-white/90 text-lg">
+        Las familias que ya entendieron el valor… ya están adentro.
+      </p>
+      <p className="mt-1 text-white font-black text-xl">
+        No te quedes por fuera.
+      </p>
+
+      <a
+        href="https://wa.me/573133881555"
+        className="mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-600 transition px-7 py-4 text-white font-black shadow-xl"
+      >
+        <MessageCircle className="w-5 h-5" />
+        Separar cupo por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* TESTIMONIOS */}
       <section className="py-20 bg-slate-100">
@@ -375,7 +405,34 @@ Quedo atento(a) a la información para reservar cupo.`;
           </div>
 
           <div className="mt-10 grid md:grid-cols-3 gap-6">
-            {testimonials.map((item) => (
+           {testimonials.map((item) => (
+  <div
+    key={item.name}
+    className="rounded-[2rem] bg-white p-6 border border-slate-200 shadow-xl"
+  >
+    <div className="flex items-center gap-4">
+      <img
+        src={item.image}
+        alt={item.name}
+        className="w-16 h-16 rounded-full object-cover border-4 border-[#E6007E]"
+      />
+      <div>
+        <p className="font-black text-slate-900">{item.name}</p>
+        <p className="text-sm text-slate-500">{item.role}</p>
+      </div>
+    </div>
+
+    <div className="mt-5">
+      <Stars />
+    </div>
+
+    <p className="mt-5 text-slate-700 text-lg leading-relaxed">
+      “{item.text}”
+    </p>
+
+    <p className="mt-5 font-black text-[#E6007E]">{item.date}</p>
+  </div>
+))}
               <div key={item.name} className="rounded-[2rem] bg-white p-6 border border-slate-200 shadow-xl">
                 <Stars />
                 <p className="mt-5 text-slate-700 text-lg leading-relaxed">“{item.text}”</p>
