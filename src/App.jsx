@@ -222,13 +222,13 @@ Quedo atento(a) a la información para reservar cupo.`;
       {/* SECCIÓN 2: VIDEO + INFO VERTICAL */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-10 items-center">
-          <div className="rounded-[2rem] overflow-hidden shadow-2xl bg-black/80 h-[350px] flex items-center justify-center relative">
-            <PlayCircle className="w-20 h-20 text-white z-10" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(230,0,126,0.3),transparent_70%)]"></div>
-            <p className="absolute bottom-6 text-white text-sm text-center w-full px-6 z-10">
-              Mira lo que vivirán tus hijos en esta experiencia
-            </p>
-          </div>
+          <div className="rounded-[2rem] overflow-hidden shadow-2xl bg-black/80 h-[350px] relative">
+  <video
+    src="/hero-video.mp4"
+    controls
+    className="w-full h-full object-cover"
+  />
+</div>
 
           <div className="flex flex-col gap-4">
             {[
