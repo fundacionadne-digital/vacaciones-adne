@@ -520,7 +520,71 @@ Quedo atento(a) a la información para reservar cupo.`;
           </div>
         </div>
       </section>
+      {/* TESTIMONIOS */}
+<section className="py-20 bg-slate-100">
+  <div className="max-w-7xl mx-auto px-6 md:px-10">
+    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <SectionTitle
+        eyebrow="Familias ADNE"
+        title="Lo que dicen las familias que ya lo vivieron"
+        subtitle="No es solo lo que decimos… es lo que ya están viviendo otras familias."
+      />
 
+      <div className="rounded-3xl bg-white border border-slate-200 p-5 shadow-lg">
+        <div className="flex items-center gap-3">
+          <p className="text-4xl font-black text-slate-900">4.9</p>
+          <div>
+            <Stars />
+            <p className="text-sm text-slate-500 font-semibold">
+              calificación general
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="mt-10 grid md:grid-cols-3 gap-6">
+      {testimonials.map((item) => (
+        <div
+          key={item.name}
+          className="rounded-[2rem] bg-white p-6 border border-slate-200 shadow-xl"
+        >
+          <div className="flex items-center gap-4">
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-16 h-16 rounded-full object-cover border-4 border-[#E6007E]"
+            />
+            <div>
+              <p className="font-black text-slate-900">{item.name}</p>
+              <p className="text-sm text-slate-500">{item.role}</p>
+            </div>
+          </div>
+
+          <div className="mt-5">
+            <Stars />
+          </div>
+
+          <p className="mt-5 text-slate-700 text-lg leading-relaxed">
+            “{item.text}”
+          </p>
+
+          <p className="mt-5 font-black text-[#E6007E]">{item.date}</p>
+        </div>
+      ))}
+    </div>
+
+    <div className="mt-10 text-center">
+      <a
+        href="https://wa.me/573133881555"
+        className="inline-flex items-center gap-2 rounded-full bg-[#E6007E] hover:bg-[#c4006b] transition px-8 py-4 text-white font-black shadow-xl"
+      >
+        <MessageCircle className="w-5 h-5" />
+        Quiero asegurar el cupo
+      </a>
+    </div>
+  </div>
+</section>
       {/* VALOR */}
       <section id="valor" className="py-20 bg-slate-100">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
