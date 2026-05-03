@@ -142,7 +142,7 @@ Correo: ${correo || "No registra"}
 Jornada de interés: ${jornada}
 Mensaje adicional: ${mensaje || "Ninguno"}
 
-Quedo atenta a la información para reservar cupo.`;
+Quedo atento(a) a la información para reservar cupo.`;
 
     const url = `https://api.whatsapp.com/send?phone=573133881555&text=${encodeURIComponent(
       texto
@@ -287,9 +287,15 @@ Quedo atenta a la información para reservar cupo.`;
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-10 items-center">
           <div className="rounded-[2rem] p-[4px] bg-gradient-to-r from-[#E6007E] via-cyan-400 to-[#E6007E] shadow-2xl">
             <div className="bg-black rounded-[1.8rem] overflow-hidden aspect-square flex items-center justify-center">
-              git add .
-git commit -m "corrige rutas imagenes testimonios"
-git push
+              <video
+                ref={videoRef}
+                src="/hero-video.mp4"
+                muted
+                loop
+                playsInline
+                controls
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
 
@@ -457,31 +463,62 @@ git push
             subtitle="Muchos niños continúan su proceso de desarrollo mientras disfrutan. Sin pausas, sin retrocesos… solo avance real."
           />
 
-          <div className="mt-10 grid lg:grid-cols-[1.35fr_0.85fr] gap-8 items-start">
+          <div className="mt-10 grid lg:grid-cols-[1.35fr_0.85fr] gap-8 items-stretch">
             <div>
               <p className="mb-4 text-xl font-black text-slate-900">
                 Aquí no solo juegan… también avanzan.
               </p>
-              <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-cyan-300 bg-slate-950 p-3">
+              <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-cyan-300 bg-slate-950 p-3 h-full">
                 <img
                   src="/terapeutico.jpeg"
                   alt="Enfoque terapéutico ADNE"
-                  className="w-full h-auto object-contain rounded-[1.5rem]"
+                  className="w-full h-full object-contain rounded-[1.5rem]"
                 />
               </div>
             </div>
 
-            <div>
-              <p className="mb-4 text-xl font-black text-slate-900">
-                Preventa activa + beneficio familiar real.
-              </p>
-              <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#E6007E] bg-slate-950 p-3">
-                <img
-                  src="/preventa.jpeg"
-                  alt="Preventa Vacaciones Recreativas ADNE"
-                  className="w-full h-auto object-contain rounded-[1.5rem]"
-                />
-                
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="mb-4 text-xl font-black text-slate-900">
+                  Preventa activa + beneficio familiar real.
+                </p>
+                <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#E6007E] bg-slate-950 p-3">
+                  <img
+                    src="/preventa.jpeg"
+                    alt="Preventa Vacaciones Recreativas ADNE"
+                    className="w-full h-auto object-contain rounded-[1.5rem]"
+                  />
+                </div>
+              </div>
+
+              <div className="rounded-[2rem] border-2 border-cyan-300 bg-white text-slate-900 p-7 shadow-xl flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">🎥</span>
+                  <p className="text-2xl font-black">Acompañamiento en vivo</p>
+                </div>
+
+                <p className="text-slate-700 text-lg leading-relaxed">
+                  En algunas actividades podrás ver a tu hijo en vivo y sentir la
+                  tranquilidad de saber cómo está disfrutando su experiencia.
+                </p>
+
+                <p className="mt-4 text-sm font-semibold text-slate-600">
+                  Momentos compartidos públicamente en TikTok para las familias
+                  que autoricen:
+                </p>
+
+                <a
+                  href="https://www.tiktok.com/@mundo_tdah_co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-2 text-[#E6007E] font-black hover:underline"
+                >
+                  🎵 @mundo_tdah_co
+                </a>
+
+                <p className="mt-4 text-xs text-slate-500">
+                  Transmisiones realizadas únicamente con autorización previa del acudiente.
+                </p>
               </div>
             </div>
           </div>
@@ -506,13 +543,7 @@ git push
               Separar cupo por WhatsApp
             </a>
           </div>
-
-            <p className="mt-4 text-xs text-slate-500">
-    Las transmisiones se realizan únicamente con autorización previa del acudiente.
-  </p>
-</div>
         </div>
-
       </section>
 
       {/* TESTIMONIOS */}
@@ -590,7 +621,7 @@ git push
             subtitle="Una fiesta inolvidable con actividades pedagógicas y recreativas, cuidado permanente y jornadas pensadas para que cada niño disfrute con seguridad."
           />
 
-          <div className="mt-10 grid lg:grid-cols-4 gap-6">
+          <div className="mt-10 grid lg:grid-cols-3 gap-6">
             <div className="rounded-[2rem] border-2 border-cyan-400 bg-slate-950 text-white p-7 shadow-xl">
               <p className="text-2xl font-black mb-5">Incluye</p>
               <ul className="space-y-3 text-slate-200">
@@ -687,31 +718,7 @@ git push
             subtitle="Una experiencia estructurada, divertida y pensada para desarrollar habilidades mientras disfrutan."
           />
 
-          <div className="grid lg:grid-cols-3 gap-6">
-            <div className="rounded-[2rem] border-2 border-cyan-300 bg-white text-slate-900 p-7 shadow-xl flex flex-col justify-center">
-  <div className="flex items-center gap-3 mb-4">
-    <span className="text-3xl">🎥</span>
-    <p className="text-xl font-black">Acompañamiento en vivo</p>
-  </div>
-
-  <p className="text-slate-700 text-base leading-relaxed">
-    En algunas actividades podrás ver a tu hijo en vivo y sentir la tranquilidad
-    de saber cómo está disfrutando su experiencia.
-  </p>
-
-  <a
-    href="https://www.tiktok.com/@mundo_tdah_co"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-4 inline-flex items-center gap-2 text-[#E6007E] font-black hover:underline"
-  >
-    🎵 @mundo_tdah_co
-  </a>
-
-  <p className="mt-4 text-xs text-slate-500">
-    Transmisiones solo con autorización previa del acudiente.
-  </p>
-</div>
+          <div className="mt-10 grid md:grid-cols-2 gap-6">
             {[
               [
                 "Lunes",
