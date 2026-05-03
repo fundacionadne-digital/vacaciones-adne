@@ -142,7 +142,7 @@ Correo: ${correo || "No registra"}
 Jornada de interés: ${jornada}
 Mensaje adicional: ${mensaje || "Ninguno"}
 
-Quedo atento(a) a la información para reservar cupo.`;
+Quedo atenta a la información para reservar cupo.`;
 
     const url = `https://api.whatsapp.com/send?phone=573133881555&text=${encodeURIComponent(
       texto
@@ -286,32 +286,12 @@ Quedo atento(a) a la información para reservar cupo.`;
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-10 items-center">
           <div className="rounded-[2rem] p-[4px] bg-gradient-to-r from-[#E6007E] via-cyan-400 to-[#E6007E] shadow-2xl">
-  <div className="relative bg-black rounded-[1.8rem] overflow-hidden aspect-square flex items-center justify-center">
-    <video
-      ref={videoRef}
-      src="/hero-video.mp4"
-      muted
-      loop
-      playsInline
-      controls
-      className="w-full h-full object-contain"
-    />
-
-    <button
-      type="button"
-      onClick={() => {
-        if (videoRef.current) {
-          videoRef.current.muted = false;
-          videoRef.current.volume = 1;
-          videoRef.current.play().catch(() => {});
-        }
-      }}
-      className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white text-slate-900 px-5 py-3 text-sm font-black shadow-xl hover:bg-cyan-100 transition z-20"
-    >
-      Activar sonido 🔊
-    </button>
-  </div>
-</div>
+            <div className="bg-black rounded-[1.8rem] overflow-hidden aspect-square flex items-center justify-center">
+              git add .
+git commit -m "corrige rutas imagenes testimonios"
+git push
+            </div>
+          </div>
 
           <div className="flex flex-col gap-4">
             {[
@@ -526,7 +506,39 @@ Quedo atento(a) a la información para reservar cupo.`;
               Separar cupo por WhatsApp
             </a>
           </div>
+
+          <div className="rounded-[2rem] border-2 border-cyan-300 bg-white text-slate-900 p-7 shadow-xl">
+  <div className="flex items-center gap-3 mb-4">
+    <span className="text-3xl">🎥</span>
+    <p className="text-2xl font-black">Acompañamiento en vivo</p>
+  </div>
+
+  <p className="text-slate-700 text-lg leading-relaxed">
+    En algunas actividades podrás ver a tu hijo en vivo y sentir la tranquilidad
+    de saber cómo está disfrutando su experiencia.
+  </p>
+
+  <div className="mt-4">
+    <p className="text-sm font-semibold text-slate-600">
+      Momentos compartidos en:
+    </p>
+
+    <a
+      href="https://www.tiktok.com/@mundo_tdah_co"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 mt-2 text-[#E6007E] font-black hover:underline"
+    >
+      🎵 @mundo_tdah_co
+    </a>
+  </div>
+
+  <p className="mt-4 text-xs text-slate-500">
+    Las transmisiones se realizan únicamente con autorización previa del acudiente.
+  </p>
+</div>
         </div>
+
       </section>
 
       {/* TESTIMONIOS */}
@@ -604,7 +616,7 @@ Quedo atento(a) a la información para reservar cupo.`;
             subtitle="Una fiesta inolvidable con actividades pedagógicas y recreativas, cuidado permanente y jornadas pensadas para que cada niño disfrute con seguridad."
           />
 
-          <div className="mt-10 grid lg:grid-cols-3 gap-6">
+          <div className="mt-10 grid lg:grid-cols-4 gap-6">
             <div className="rounded-[2rem] border-2 border-cyan-400 bg-slate-950 text-white p-7 shadow-xl">
               <p className="text-2xl font-black mb-5">Incluye</p>
               <ul className="space-y-3 text-slate-200">
