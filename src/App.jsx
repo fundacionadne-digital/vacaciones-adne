@@ -286,12 +286,32 @@ Quedo atento(a) a la información para reservar cupo.`;
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-10 items-center">
           <div className="rounded-[2rem] p-[4px] bg-gradient-to-r from-[#E6007E] via-cyan-400 to-[#E6007E] shadow-2xl">
-            <div className="bg-black rounded-[1.8rem] overflow-hidden aspect-square flex items-center justify-center">
-              git add .
-git commit -m "corrige rutas imagenes testimonios"
-git push
-            </div>
-          </div>
+  <div className="relative bg-black rounded-[1.8rem] overflow-hidden aspect-square flex items-center justify-center">
+    <video
+      ref={videoRef}
+      src="/hero-video.mp4"
+      muted
+      loop
+      playsInline
+      controls
+      className="w-full h-full object-contain"
+    />
+
+    <button
+      type="button"
+      onClick={() => {
+        if (videoRef.current) {
+          videoRef.current.muted = false;
+          videoRef.current.volume = 1;
+          videoRef.current.play().catch(() => {});
+        }
+      }}
+      className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white text-slate-900 px-5 py-3 text-sm font-black shadow-xl hover:bg-cyan-100 transition z-20"
+    >
+      Activar sonido 🔊
+    </button>
+  </div>
+</div>
 
           <div className="flex flex-col gap-4">
             {[
@@ -481,13 +501,7 @@ git push
                   alt="Preventa Vacaciones Recreativas ADNE"
                   className="w-full h-auto object-contain rounded-[1.5rem]"
                 />
-                <a
-  href="https://wa.me/573133881555"
-  className="mt-5 inline-flex w-full justify-center items-center gap-2 rounded-full bg-[#E6007E] hover:bg-[#c4006b] transition px-6 py-4 text-white font-black shadow-xl"
->
-  Separar mi cupo y aprovechar preventa
-  <ArrowRight className="w-5 h-5" />
-</a>
+                
               </div>
             </div>
           </div>
