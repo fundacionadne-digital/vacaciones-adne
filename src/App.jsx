@@ -507,33 +507,7 @@ git push
             </a>
           </div>
 
-          <div className="rounded-[2rem] border-2 border-cyan-300 bg-white text-slate-900 p-7 shadow-xl">
-  <div className="flex items-center gap-3 mb-4">
-    <span className="text-3xl">🎥</span>
-    <p className="text-2xl font-black">Acompañamiento en vivo</p>
-  </div>
-
-  <p className="text-slate-700 text-lg leading-relaxed">
-    En algunas actividades podrás ver a tu hijo en vivo y sentir la tranquilidad
-    de saber cómo está disfrutando su experiencia.
-  </p>
-
-  <div className="mt-4">
-    <p className="text-sm font-semibold text-slate-600">
-      Momentos compartidos en:
-    </p>
-
-    <a
-      href="https://www.tiktok.com/@mundo_tdah_co"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 mt-2 text-[#E6007E] font-black hover:underline"
-    >
-      🎵 @mundo_tdah_co
-    </a>
-  </div>
-
-  <p className="mt-4 text-xs text-slate-500">
+            <p className="mt-4 text-xs text-slate-500">
     Las transmisiones se realizan únicamente con autorización previa del acudiente.
   </p>
 </div>
@@ -713,7 +687,31 @@ git push
             subtitle="Una experiencia estructurada, divertida y pensada para desarrollar habilidades mientras disfrutan."
           />
 
-          <div className="mt-10 grid md:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-3 gap-6">
+            <div className="rounded-[2rem] border-2 border-cyan-300 bg-white text-slate-900 p-7 shadow-xl flex flex-col justify-center">
+  <div className="flex items-center gap-3 mb-4">
+    <span className="text-3xl">🎥</span>
+    <p className="text-xl font-black">Acompañamiento en vivo</p>
+  </div>
+
+  <p className="text-slate-700 text-base leading-relaxed">
+    En algunas actividades podrás ver a tu hijo en vivo y sentir la tranquilidad
+    de saber cómo está disfrutando su experiencia.
+  </p>
+
+  <a
+    href="https://www.tiktok.com/@mundo_tdah_co"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4 inline-flex items-center gap-2 text-[#E6007E] font-black hover:underline"
+  >
+    🎵 @mundo_tdah_co
+  </a>
+
+  <p className="mt-4 text-xs text-slate-500">
+    Transmisiones solo con autorización previa del acudiente.
+  </p>
+</div>
             {[
               [
                 "Lunes",
