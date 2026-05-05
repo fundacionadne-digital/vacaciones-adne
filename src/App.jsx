@@ -463,19 +463,13 @@ Quedo atento(a) a la información para reservar cupo.`;
             subtitle="Muchos niños continúan su proceso de desarrollo mientras disfrutan. Sin pausas, sin retrocesos… solo avance real."
           />
 
-          <div className="mt-10 grid lg:grid-cols-[1.35fr_0.85fr] gap-8 items-stretch">
-            <div>
-              <p className="mb-4 text-xl font-black text-slate-900">
-                Aquí no solo juegan… también avanzan.
-              </p>
-              <div className="rounded-[2rem] overflow-hidden shadow-xl h-full">
-               <img
-               src="/terapeutico.png"
-                alt="terapeutico"
-                className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+          <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-cyan-300 bg-white h-[420px] flex items-center justify-center">
+  <img
+    src="/terapeutico.jpeg"
+    alt="Enfoque terapéutico ADNE"
+    className="w-full h-full object-contain"
+  />
+</div>
 
             <div className="flex flex-col gap-8">
               <div>
