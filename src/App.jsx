@@ -455,120 +455,90 @@ Quedo atento(a) a la información para reservar cupo.`;
       </section>
 
       {/* IMÁGENES DE VALOR */}
-<section className="py-20 bg-black">
-  <div className="max-w-7xl mx-auto px-6 md:px-10">
-    <SectionTitle
-      eyebrow="Valor diferencial"
-      title="Aquí no solo juegan… también avanzan"
-      subtitle="Muchos niños continúan su proceso de desarrollo mientras disfrutan. Sin pausas, sin retrocesos… solo avance real."
-    />
-
-    <div className="mt-10 grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-stretch">
-      
-      {/* IMAGEN TERAPÉUTICA */}
-      <div>
-        <p className="mb-4 text-xl font-black text-white">
-          Aquí no solo juegan… también avanzan.
-        </p>
-
-        <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-cyan-300 bg-white h-[420px] flex items-center justify-center">
-          <img
-            src="/terapeutico.jpeg"
-            alt="Enfoque terapéutico ADNE"
-            className="w-full h-full object-contain"
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <SectionTitle
+            eyebrow="Valor diferencial"
+            title="Aquí no solo juegan… también avanzan"
+            subtitle="Muchos niños continúan su proceso de desarrollo mientras disfrutan. Sin pausas, sin retrocesos… solo avance real."
           />
-        </div>
-      </div>
 
-      {/* COLUMNA DERECHA */}
-      <div className="flex flex-col gap-8">
-
-        {/* PREVENTA */}
-        <div>
-          <p className="mb-4 text-xl font-black text-white">
-            Preventa activa + beneficio familiar real.
-          </p>
-
-          <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#E6007E] bg-slate-950 p-3">
-            <img
-              src="/preventa.jpeg"
-              alt="Preventa Vacaciones Recreativas ADNE"
-              className="w-full h-auto object-contain rounded-[1.5rem]"
-            />
+          <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-cyan-300 bg-white h-[420px] flex items-center justify-center">
+           <img
+           src="/terapeutico.jpeg"
+           alt="Enfoque terapéutico ADNE"
+           className="w-full h-full object-contain"
+           />
           </div>
 
-          <a
-            href="https://wa.me/573133881555"
-            className="mt-5 inline-flex w-full justify-center items-center gap-2 rounded-full bg-[#E6007E] hover:bg-[#c4006b] transition px-6 py-4 text-white font-black shadow-xl"
-          >
-            Separar mi cupo y aprovechar preventa
-            <ArrowRight className="w-5 h-5" />
-          </a>
-        </div>
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="mb-4 text-xl font-black text-slate-900">
+                  Preventa activa + beneficio familiar real.
+                </p>
+                <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#E6007E] bg-slate-950 p-3">
+                  <img
+                    src="/preventa.jpeg"
+                    alt="Preventa Vacaciones Recreativas ADNE"
+                    className="w-full h-auto object-contain rounded-[1.5rem]"
+                  />
+                </div>
+              </div>
 
-        {/* TIKTOK */}
-        <div className="rounded-[2rem] border-2 border-cyan-300 bg-white text-slate-900 p-7 shadow-xl flex flex-col justify-center">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-3xl">🎥</span>
-            <p className="text-2xl font-black">
-              Acompañamiento en vivo
+              <div className="rounded-[2rem] border-2 border-cyan-300 bg-white text-slate-900 p-7 shadow-xl flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">🎥</span>
+                  <p className="text-2xl font-black">Acompañamiento en vivo</p>
+                </div>
+
+                <p className="text-slate-700 text-lg leading-relaxed">
+                  En algunas actividades podrás ver a tu hijo en vivo y sentir la
+                  tranquilidad de saber cómo está disfrutando su experiencia.
+                </p>
+
+                <p className="mt-4 text-sm font-semibold text-slate-600">
+                  Momentos compartidos públicamente en TikTok para las familias
+                  que autoricen:
+                </p>
+
+                <a
+                  href="https://www.tiktok.com/@mundo_tdah_co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-2 text-[#E6007E] font-black hover:underline"
+                >
+                  🎵 @mundo_tdah_co
+                </a>
+
+                <p className="mt-4 text-xs text-slate-500">
+                  Transmisiones realizadas únicamente con autorización previa del acudiente.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-[2rem] bg-gradient-to-r from-[#E6007E] via-[#7c3aed] to-cyan-500 text-white p-7 md:p-9 shadow-2xl">
+            <p className="text-3xl md:text-5xl font-black">20% OFF</p>
+            <p className="mt-2 text-xl md:text-2xl font-black">
+              Preventa activa + descuento adicional por hermanos.
             </p>
+            <p className="mt-4 text-white/90 text-lg">
+              Las familias que ya entendieron el valor… ya están adentro.
+            </p>
+            <p className="mt-1 text-white font-black text-xl">
+              No te quedes por fuera.
+            </p>
+
+            <a
+              href="https://wa.me/573133881555"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-600 transition px-7 py-4 text-white font-black shadow-xl"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Separar cupo por WhatsApp
+            </a>
           </div>
-
-          <p className="text-slate-700 text-lg leading-relaxed">
-            En algunas actividades podrás ver a tu hijo en vivo y sentir la tranquilidad
-            de saber cómo está disfrutando su experiencia.
-          </p>
-
-          <p className="mt-4 text-sm font-semibold text-slate-600">
-            Momentos compartidos públicamente en TikTok para las familias
-            que autoricen:
-          </p>
-
-          <a
-            href="https://www.tiktok.com/@mundo_tdah_co"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 inline-flex items-center gap-2 text-[#E6007E] font-black hover:underline"
-          >
-            🎵 @mundo_tdah_co
-          </a>
-
-          <p className="mt-4 text-xs text-slate-500">
-            Transmisiones realizadas únicamente con autorización previa del acudiente.
-          </p>
         </div>
-      </div>
-    </div>
-
-    {/* BLOQUE 20% */}
-    <div className="mt-8 rounded-[2rem] bg-gradient-to-r from-[#E6007E] via-[#7c3aed] to-cyan-500 text-white p-7 md:p-9 shadow-2xl">
-      <p className="text-3xl md:text-5xl font-black">
-        20% OFF
-      </p>
-
-      <p className="mt-2 text-xl md:text-2xl font-black">
-        Preventa activa + descuento adicional por hermanos.
-      </p>
-
-      <p className="mt-4 text-white/90 text-lg">
-        Las familias que ya entendieron el valor… ya están adentro.
-      </p>
-
-      <p className="mt-1 text-white font-black text-xl">
-        No te quedes por fuera.
-      </p>
-
-      <a
-        href="https://wa.me/573133881555"
-        className="mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-600 transition px-7 py-4 text-white font-black shadow-xl"
-      >
-        <MessageCircle className="w-5 h-5" />
-        Separar cupo por WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* TESTIMONIOS */}
       <section className="py-20 bg-slate-100">
